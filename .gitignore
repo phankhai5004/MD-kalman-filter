@@ -1,0 +1,66 @@
+# --- Java / Spring Boot ---
+/target/
+/bin/
+/build/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Logs
+*.log
+
+# --- Python / FastAPI ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+venv/
+env/
+ENV/
+.venv/
+
+# Poetry (if you use it)
+poetry.lock
+
+# PyInstaller
+*.spec
+
+# --- IDEs / Editors ---
+# IntelliJ IDEA / Android Studio
+.idea/
+*.iml
+
+# VSCode
+.vscode/
+
+# PyCharm
+*.idea/
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- Environment Variables / Secrets ---
+.env
+.env.*
