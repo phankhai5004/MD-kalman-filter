@@ -27,7 +27,7 @@ public class GpsDataService {
     ) {
         GpsData gpsData = gpsDataMapper.toGpsData(gpsDataCreator);
 
-//        gpsDataRepository.save(gpsData);
+        gpsData = gpsDataRepository.save(gpsData);
         kafkaTemplate.send("gps-data", gpsData);
     }
 

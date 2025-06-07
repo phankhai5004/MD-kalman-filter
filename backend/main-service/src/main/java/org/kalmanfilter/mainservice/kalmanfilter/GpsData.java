@@ -3,7 +3,7 @@ package org.kalmanfilter.mainservice.kalmanfilter;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.sql.Timestamp;
+import java.time.Instant;
 
 @Entity
 @Getter
@@ -14,15 +14,14 @@ import java.sql.Timestamp;
 @Table(name = "gps_data")
 public class GpsData {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private Double accuracy;
     private Double altitude;
     private Double course;
 
-    @Column(name = "fixtime")
-    private Timestamp fixtime;
+    private Instant fixtime;
     private Double latitude;
     private Double longitude;
     private Double speed;

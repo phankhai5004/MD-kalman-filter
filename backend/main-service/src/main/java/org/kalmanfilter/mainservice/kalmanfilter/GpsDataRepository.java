@@ -8,8 +8,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.sql.Timestamp;
 import java.util.List;
 
+public interface GpsDataRepository extends JpaRepository<GpsData, Long> {
+    Page<GpsData> findByFixtimeBetween(Timestamp fixtime, Timestamp fixtime2, Pageable pageable);
 
-public interface GpsDataRepository extends JpaRepository<GpsData, String> {
-    Page<GpsData> findByFixtimeBetween(Timestamp timestamp, Timestamp timestamp1, Pageable pageable);
-    List<GpsData> findByFixtimeBetween(Timestamp timestamp, Timestamp timestamp1, Sort sort);
+    List<GpsData> findByFixtimeBetween(Timestamp startTimestamp, Timestamp endTimestamp, Sort sort);
 }

@@ -4,7 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.sql.Timestamp;
+import java.time.Instant;
 
 @Getter
 @Setter
@@ -14,7 +14,7 @@ public class GpsDataReponse {
     private Double altitude;
     private Double course;
 
-    private Timestamp fixtime;
+    private Instant fixtime;
     private Double latitude;
     private Double longitude;
     private Double speed;
